@@ -30,7 +30,12 @@
             <InputText type="text" v-model="filters['question']" class="p-column-filter" placeholder="Search question text"/>
         </template>
     </Column>
-    <Column field="correct" header="Correct" :sortable="true" headerStyle="width: 8em"></Column>
+    <Column field="answer" header="Answer" :sortable="true">
+            <template #filter>
+            <InputText type="text" v-model="filters['answer']" class="p-column-filter" placeholder="Search answer text"/>
+        </template>
+
+    </Column>
 </DataTable>
 </template>
 
@@ -53,13 +58,19 @@ export default defineComponent({
     MultiSelect,
   },
   data: () => ({
-    questions: generalQuestions,
     selected: null,
     filters: {}
   }),
   computed: {
     groups() {
       return Object.entries(generalGroups).map(([id, name]) => ({ id, name }))
+    },
+    questions() {
+      return generalQuestions.map(q => ({
+        ...q,
+        answer: q.answers[q.correct],
+      }))
+
     }
   }
 });
