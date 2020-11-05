@@ -31,25 +31,16 @@
   "G7A": "Power supplies; schematic symbols",
   "G7B": "Digital circuits; amplifiers and oscillators",
   "G7C": "Receivers and transmitters; filters; oscillators",
-  "G8": "",
-  "G8A": "",
-  "G8B": "",
-  "G8C": "",
-  "G9": "",
+  "G8": "Signals and Emissions",
+  "G8A": "Carriers and modulation: AM; FM; single sideband; modulation envelope; digital modulation; overmodulation",
+  "G8B": "Frequency mixing; multiplication; bandwidths of various modes; deviation; duty cycle; intermodulation",
+  "G8C": "Digital emission modes",
+  "G9": "Antennas and Feed Lines",
+  "G9A": "Antenna feed lines: characteristic impedance and attenuation; SWR calculation, measurement, and effects; matching networks",
+  "G9B": "Basic antennas",
+  "G9C": "Directional antennas",
+  "G9D": "Specialized antennas",
+  "G0": "Electrical And RF Safety",
+  "G0A": "RF safety principles, rules and guidelines; routine station evaluation",
+  "G0B": "Station safety: electrical shock, safety grounding, fusing, interlocks, wiring, antenna and tower safety"
 }
-
-
-SUBELEMENT G8 – SIGNALS AND EMISSIONS [3 Exam Questions – 3 Groups] 38 Questions
-G8A – Carriers and modulation: AM; FM; single sideband; modulation envelope; digital modulation;
-overmodulation
-G8B – Frequency mixing; multiplication; bandwidths of various modes; deviation; duty cycle; intermodulation
-G8C – Digital emission modes
-SUBELEMENT G9 – ANTENNAS AND FEED LINES [4 Exam Questions – 4 Groups] 54 Questions
-G9A – Antenna feed lines: characteristic impedance and attenuation; SWR calculation, measurement, and
-effects; matching networks
-G9B – Basic antennas
-G9C – Directional antennas
-G9D – Specialized antennas
-SUBELEMENT G0 – ELECTRICAL AND RF SAFETY [2 Exam Questions – 2 Groups] 25 Questions
-G0A – RF safety principles, rules and guidelines; routine station evaluation
-G0B – Station safety: electrical shock, safety grounding, fusing, interlocks, wiring, antenna and tower safety

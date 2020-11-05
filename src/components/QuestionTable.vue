@@ -19,8 +19,17 @@
             </span>
         </div>
     </template>
-    <Column field="id" header="ID" :sortable="true" headerStyle="width: 6em"></Column>
-    <Column field="question" header="Question" :sortable="true"></Column>
+    <Column field="id" header="ID" :sortable="true" headerStyle="width: 6em">
+                <template #filter>
+            <MultiSelect v-model="filters['id']" :options="groups" optionLabel="name" optionValue="id" placeholder="All" class="p-column-filter">
+            </MultiSelect>
+        </template>
+    </Column>
+    <Column field="question" header="Question" :sortable="true" filterMatchMode="contains">
+        <template #filter>
+            <InputText type="text" v-model="filters['question']" class="p-column-filter" placeholder="Search question text"/>
+        </template>
+    </Column>
     <Column field="correct" header="Correct" :sortable="true" headerStyle="width: 8em"></Column>
 </DataTable>
 </template>
@@ -29,8 +38,10 @@
 import { defineComponent } from 'vue';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
+import MultiSelect from 'primevue/multiselect';
 import InputText from 'primevue/inputtext';
 import generalQuestions from '@/data/general.json';
+import generalGroups from '@/data/groups.json';
 
 
 export default defineComponent({
@@ -39,12 +50,18 @@ export default defineComponent({
     DataTable,
     Column,
     InputText,
+    MultiSelect,
   },
   data: () => ({
     questions: generalQuestions,
     selected: null,
     filters: {}
-  })
+  }),
+  computed: {
+    groups() {
+      return Object.entries(generalGroups).map(([id, name]) => ({ id, name }))
+    }
+  }
 });
 </script>
 
